@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50...150,100...900&family=Barlow+Semi+Condensed:wght@300;700;900&family=Oswald:wght@200...700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0;
+    background-color: #EAE0CA;
+}
+
+nav {
+    color: white;
+    width: 100vw;
+    height: 16vh;
+    background-color: #E62053;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mostrar {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh;
+    justify-content: space-between;
+    position: fixed;
+    background-color:#E62053;
+    left: 0;
+    top: 16vh;
+    padding: 5vw;
+    width: 100vw;
+}
+
+nav div {
+
+    display: flex;
+    width: 24.11%;
+    justify-content: space-between;
+
+}
+
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    /*regular el espacio entre diferentes filas de un contenedor con elementos con flex*/
+    height: 100vh;
+    margin-bottom: 20px;
+   
+
+}
+
+ /*PARA QUE SE ABRAN LAS FOTITOS EN GALRIAS*/ 
+
+.lightbox {
+    width: 100%;
+    z-index: 10000;
+    font-weight: 400 ;
+    font-size: 40;
+    color: #09084a;
+    outline:0
+}
+
+ /*CONFIGURACIONES DE LIGHTBOX Y LOS TEXTOS QUE INCLUYEN*/ 
+
+.lb-data {
+    padding: 0 4px;
+    color: #09084a;
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 100px;
+    border: 20px, #EAE0CA ;
+}
+
+
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #09084a;
+}
+
+
+.lightboxOverlay{
+background-color: #EAE0CA;
+
+
+}
+
+section div {
+    width: 45.83%;
+}
+
+section div img , video{
+    width: 100%;
+    border-radius: 40px;
+}
+
+header {
+    height: 43vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+ /*TAMAÑO DEL MALENA*/ 
+
+h1 { 
+    margin: 0;
+
+    font-size: 40px;
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 150%;
+}
+
+nav h1 {
+
+    font-weight: 700;
+    letter-spacing: 5px;
+
+
+
+}
+
+/*MALENA*/ 
+header h1 {
+
+    font-family: 'Unbounded', cursive;
+    color: #09084a;
+    line-height: 140%;
+    animation-name: estirar;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes estirar {
+    0% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(1.2);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+
+/*TRABAJO*/ 
+header h3 {
+    text-transform: uppercase;
+    color: #09084a;
+    letter-spacing: 5px;
+
+}
+
+/*¡Diseño, dibujo e ilustro!*/ 
+header p {
+   
+    color: #09084a;
+    font-size: 20px;
+}
+
+/*Contactame y elementos de la lista*/ 
+
+header a,
+nav a {
+    
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+/*Contactame*/
+
+header a {
+
+    background-color: #E62053;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    border-radius: 30px;
+    transition: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+
+}
+
+/*Contactame cambia de color al hoverearlo*/
+
+header a:hover {
+    background-color: #09084a;
+}
+
+nav span {
+    display: none;
+}
+
+
+
+/*menu hamburg click*/
+
+.icon-menu::before {
+
+    color: white;
+    font-size: 4vw;
+
+
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+
+
+}
+
+
+
+section div {
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+section div:hover {
+    transform: scale(1.1);
+}
+
+
+
+  
+
+
+@media(max-width: 1200px) {
+
+    nav div {
+        width: 50%;
+    }
+
+
+    main section {
+
+
+        height: auto;
+    }
+
+
+
+
+
+}
+
+
+@media (max-width: 992px) {
+    section {
+
+        height: auto;
+
+    }
+
+    section div {
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav div {
+        display: none;
+    }
+
+    /*desaparecen los items del menu*/
+
+    nav span {
+        display: inline;
+    }
+
+    /*volvemos a mostrar el menu de barritas*/
+
+
+
+}
